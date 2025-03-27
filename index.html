@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Lash Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Agendamento de Cílios</h2>
+        <p>Selecione um dia para ver os horários disponíveis:</p>
+        <div class="calendar" id="calendar"></div>
+        <div id="availability-bar"></div>
+        <div class="times" id="times"></div>
+        
+        <div id="client-info" class="hidden">
+            <h3>Finalize seu agendamento</h3>
+            <label for="clientName"><i class="fas fa-user"></i> Nome:</label>
+            <input type="text" id="clientName" placeholder="Digite seu nome" required>
+            
+            <label for="clientPhone"><i class="fas fa-phone"></i> WhatsApp:</label>
+            <input type="tel" id="clientPhone" placeholder="(XX) XXXXX-XXXX" required>
+            
+            <button onclick="sendWhatsApp()"><i class="fab fa-whatsapp"></i> Confirmar e Enviar WhatsApp</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
