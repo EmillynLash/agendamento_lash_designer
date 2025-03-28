@@ -6,19 +6,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
-    padding: 10px;
 }
 
 /* Container principal */
 .container {
     background: #f5f5f5;
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 350px;
     text-align: center;
     border: 2px solid #f06292;
 }
@@ -26,24 +25,24 @@ body {
 /* Título */
 h2 {
     color: #f06292;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 /* Calendário */
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 0px;
-    margin-bottom: 0px;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .calendar-day {
     background: #fff;
     color: #f06292;
     border: 2px solid #f06292;
-    padding: 10px;
-    margin: 5px;
+    padding: 8px;
+    margin: 2px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
@@ -67,26 +66,20 @@ h2 {
     color: #f06292;
     font-weight: bold;
     text-align: center;
-    padding: 8px;
-    font-size: 14px;
+    padding: 5px;
+    font-size: 12px;
 }
 
 /* Horários */
-.times {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-}
-
 .time {
     background: #f8bbd0;
     color: #f06292;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
     font-size: 14px;
+    margin: 2px;
 }
 
 .time:hover {
@@ -104,11 +97,11 @@ h2 {
 /* Formulário do cliente */
 input, button {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 8px;
+    margin: 8px 0;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -118,6 +111,7 @@ button {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    border: none;
 }
 
 button:hover {
@@ -127,10 +121,10 @@ button:hover {
 
 /* Barra de Disponibilidade */
 #availability-bar {
-    height: 8px;
+    height: 6px;
     width: 100%;
     background-color: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .bar {
@@ -146,29 +140,29 @@ button:hover {
 /* Responsividade */
 @media (max-width: 400px) {
     .container {
-        width: 90%;
-        padding: 20px;
+        width: 95%;
+        max-width: 320px;
     }
 
-    .calendar {
-        grid-template-columns: repeat(7, 1fr);
-    }
-
-    .calendar-day,
-    .calendar-day-header {
+    .calendar-day {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
         font-size: 12px;
-        padding: 8px;
-        margin: 3px;
+    }
+
+    .calendar-day-header {
+        font-size: 10px;
     }
 
     .time {
         font-size: 12px;
-        padding: 8px;
+        padding: 6px;
     }
 
-    input,
-    button {
+    input[type="text"],
+    input[type="tel"] {
+        width: 100%;
         font-size: 14px;
-        padding: 8px;
     }
 }
