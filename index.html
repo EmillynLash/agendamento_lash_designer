@@ -22,7 +22,69 @@
             
             <label for="clientPhone"><i class="fas fa-phone"></i> WhatsApp:</label>
             <input type="tel" id="clientPhone" placeholder="(XX) XXXXX-XXXX" required>
-            
+
+            <div id="anamnese" class="hidden">
+                <h3>Ficha de Anamnese</h3>
+                <form id="anamneseForm">
+                    <div class="question">
+                        <label>Está gestante?</label>
+                        <div>
+                            <label><input type="radio" name="gestante" value="Sim" required> Sim</label>
+                            <label><input type="radio" name="gestante" value="Não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label>Tem alergia a produtos cosméticos?</label>
+                        <div>
+                            <label><input type="radio" name="alergia" value="Sim" required> Sim</label>
+                            <label><input type="radio" name="alergia" value="Não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label>Usa lentes de contato?</label>
+                        <div>
+                            <label><input type="radio" name="lentes" value="Sim" required> Sim</label>
+                            <label><input type="radio" name="lentes" value="Não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label>Já realizou alongamento de cílios?</label>
+                        <div>
+                            <label><input type="radio" name="alongamento" value="Sim" required> Sim</label>
+                            <label><input type="radio" name="alongamento" value="Não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label>Faz uso de colírios ou medicação ocular?</label>
+                        <div>
+                            <label><input type="radio" name="colirio" value="Sim" required> Sim</label>
+                            <label><input type="radio" name="colirio" value="Não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label>Está sob algum tratamento médico?</label>
+                        <div>
+                            <label><input type="radio" name="tratamento" value="Sim" required> Sim</label>
+                            <label><input type="radio" name="tratamento" value="Não"> Não</label>
+                        </div>
+                    </div>
+
+                    <div class="signature">
+                        <label>Assinatura (nome completo):</label>
+                        <input type="text" id="assinatura" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="terms">
+                        <label>
+                            <input type="checkbox" id="aceiteTermos" required>
+                            Declaro que li e aceito os termos da Lei Geral de Proteção de Dados (LGPD).
+                        </label>
+                    </div>
+
+                    <button type="submit">Finalizar Anamnese</button>
+                </form>
+            </div>
+
             <button onclick="sendWhatsApp()"><i class="fab fa-whatsapp"></i> Confirmar e Enviar WhatsApp</button>
         </div>
     </div>
